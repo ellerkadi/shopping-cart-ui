@@ -4,7 +4,7 @@
       <h5>Total:</h5>
       <h5 class="fw-bold">{{ cartTotal.toFixed(2) }} €</h5>
     </div>
-    <div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="d-flex justify-contenteen align-items-center mb-3">
       <h5>Tax:</h5>
       <h5 class="fw-bold">{{ cartTax.toFixed(2) }} €</h5>
     </div>
@@ -18,9 +18,18 @@
 <script>
 export default {
   props: {
-    cartTotal: Number,
-    cartTax: Number,
-    cartTotalWTax: Number,
+    cartTotal: {
+      type: Number,
+      default: 0, // Default to 0 if not provided
+    },
+    cartTax: {
+      type: Number,
+      default: 0,
+    },
+    cartTotalWTax: {
+      type: Number,
+      default: 0,
+    },
   },
 };
 </script>
